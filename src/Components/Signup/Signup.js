@@ -15,7 +15,6 @@ export default function Signup() {
 const {firebase}=useContext(FirebaseContext)
   const handleSubmit=(e)=>{
     e.preventDefault()
-    console.log(firebase);
     firebase
     .auth()
     .createUserWithEmailAndPassword(email, password)
@@ -86,7 +85,10 @@ const {firebase}=useContext(FirebaseContext)
           <br />
           <button>Signup</button>
         </form>
-        <a>Login</a>
+        
+        <button onClick={()=>{
+          history.push('/login')
+        }}>Login</button>
       </div>
     </div>
   );

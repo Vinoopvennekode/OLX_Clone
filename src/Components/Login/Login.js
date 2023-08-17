@@ -13,7 +13,7 @@ function Login() {
     e.preventDefault();
     firebase
       .auth()
-      .signInWithEmailAndPassword(email, password)
+      .signInWithEmailAndPassword(email,password)
       .then(() => {
         history.push("/");
       })
